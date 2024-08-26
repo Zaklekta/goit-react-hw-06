@@ -1,0 +1,29 @@
+.contactItem {
+  padding: 10px;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 10px;
+
+  font-size: 20px;
+}
+
+.delContactBtn {
+  border: 1px solid grey;
+  border-radius: 4px;
+  outline: none;
+  width: 80px;
+  height: 40px;
+  font-size: 16px;
+}
+.wrapName,
+.wrapPhone {
+  padding-left: 10px;
+}
+.contactName {
+  margin-bottom: 8px;
+}
