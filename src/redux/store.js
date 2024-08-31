@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { contactsReducer } from "./contactsSlice";
-import { filterReducer } from "./filterSlice";
+import { filterReducer } from "./filtersSlice";
 
 import {
   persistStore,
@@ -15,15 +15,15 @@ import {
 import storage from "redux-persist/lib/storage";
 
 const contactsConfig = {
-  key: "contacts",
+  key: "items",
   storage,
-  whitelist: ["contacts"],
+  whitelist: ["items"],
 };
 
 export const store = configureStore({
   reducer: {
     contacts: persistReducer(contactsConfig, contactsReducer),
-    filter: filterReducer,
+    filters: filterReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
